@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    
+    <style>
+        /* --- CSS STYLES --- */
+
+        .image-box {
+        background-color: #000000;
+        color: white;
+        cursor: pointer;
+        
+        }
+
+        .active, .image-box:hover {
+        background-color: #f307f3;
+        }
+
+        .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensures the form is centered vertically 
+*/
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Gives it a 
+lifted, professional look */
+            width: 350px;
+            
+            
+        }
+
+        h2 {
+            
+            margin-bottom: 30px;
+            color: #ff0000;
+        }
+
+        /* Styles the grouping of label and input */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block; /* Makes the label appear on its own line */
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* Styles the actual input box */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Includes padding inside the width 
+*/
+            font-size: 16px;
+        }
+
+        /* Styles the submit button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff; /* A standard blue color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="login-container">
+        <h2>Login to Your Account</h2>
+        
+        <!-- 
+            The <form> tag groups the inputs. 
+            'action' is where the data is sent (e.g., a server script).
+            'method="post"' is best for passwords, as it sends data in the 
+body (not visible in the URL).
+        -->
+        <form action="/fullpage.html" method="post">
+            
+            <!-- USERNAME INPUT -->
+            <div class="input-group">
+                <!-- For accessibility, the 'for' attribute must match the 
+input's 'id' -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <!-- PASSWORD INPUT -->
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <!-- 'type="password"' ensures that the characters typed 
+are masked (shown as dots/asterisks) -->
+                <input type="password" id="password" name="password" 
+required>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit">Log In</button>
+            
+        </form>
+    </div>
+
+    <br>
+    <button type="button" class="image-box">Open</button>
+    <div class="content">
+        <img src="coolhayner.jpg">
+    </div>
+    <script>
+    var coll = document.getElementsByClassName("image-box");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+        content.style.display = "none";
+        } else {
+        content.style.display = "block";
+        }
+    });
+    }
+    </script>
+
+</body>
+</html>

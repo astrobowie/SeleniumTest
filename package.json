@@ -1,0 +1,19 @@
+{
+  "name": "seleniumtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "seleniumTest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astrobowie/SeleniumTest.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/astrobowie/SeleniumTest/issues"
+  },
+  "homepage": "https://github.com/astrobowie/SeleniumTest#readme"
+}

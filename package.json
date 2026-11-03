@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/astrobowie/SeleniumTest/issues"
   },
-  "homepage": "https://github.com/astrobowie/SeleniumTest#readme"
+  "homepage": "https://github.com/astrobowie/SeleniumTest#readme",
+  "devDependencies": {
+    "mocha": "^12.0.2"
+  }
 }
